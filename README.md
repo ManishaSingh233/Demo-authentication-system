@@ -1,4 +1,4 @@
-# DemoCMS
+# Authentication Sytem
 
 To start your Phoenix server:
 
