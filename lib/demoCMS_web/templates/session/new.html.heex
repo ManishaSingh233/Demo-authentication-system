@@ -1,0 +1,34 @@
+<h1>Sign Up</h1>
+<%= form_for @conn, Routes.session_path( @conn, :create), [method: :post, as: :user],
+fn f -> %>
+    
+        <div class="alert alert-info">
+            <p>Enter correct email-id</p>
+        </div>
+        <%= label f, :Email %>
+        <%= text_input f, :email %>
+
+
+   
+
+        <%= label f, :password %>
+        <%= password_input f, :password %>
+
+        <div>
+            <%= submit "Login" %>
+        </div>
+        
+    <% end %>
+    
+
+<%= form_for @conn, Routes.session_path(@conn, :delete), [method: :delete, as: :user],
+fn _ -> %>
+    <div>
+        <%= submit "logout" %>
+    </div>
+<% end %>
+
+
+
+
+    
